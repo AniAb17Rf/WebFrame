@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Comments
+</title>
+<style>
+#coms{
+position:relative;
+left:35%;
+border:2px solid black;
+width:500px}
+</style>
+</head>
+<body align="center" bgcolor="#a8c6f7" style="font-size:18px">
+<h1><i><u> Comments Section </u></i></h1><br>
+ {% for cmt in comm %}
+ <div id="coms">
+ <div><b>{{ cmt.email }}</b>  <i>says</i><br></div>
+ <div>{{cmt.comments}}</div><br><br><br>
+ </div>
+{% endfor %}
+<br>
+<a href="{%url 'WT'%}"><button name="Genre" id="Crime"><div style="font-family:'Times New Roman',Times,serif ;padding:5px;  font-size:25px" >Home</div></button></a><br><br><br>
+</body>
+</html>
